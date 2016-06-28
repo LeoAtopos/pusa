@@ -1,3 +1,11 @@
 #cover{
-	background-image : url(http://img1.gamersky.com/image2014/06/20140609sjh_13/gamersky_02small_04_2014691726891.jpg);
+	/*outline-style:dotted;
+ 	outline-color:#00ff00;*/
+ 	text-align:center;
+ 	height: 400px;
+ 	line-height:400px;
+	background-image : url(cover.jpg);
+	background-size: 100% auto; 
+	background-repeat:no-repeat;
+	background-position:center;
 }
