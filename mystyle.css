@@ -2,6 +2,11 @@
 	height: 50;
 	background-color: #252533;
 	min-width: 600px;
+	max-width: 1140px;
+	text-align: center;
+	background-position:center;
+	list-style-position: center;
+	background-repeat:no-repeat;
 }
 /*in-headers_________________________________________________________*/
 #logo{
@@ -35,10 +40,8 @@
 
 #cover{
  	height: 300px;
-/* 	line-height:30px;*/
  	text-align: center;
 	background-image : url(./images/cover.jpg);
-	/*background-size: 100% auto; */
 	background-repeat:no-repeat;
 	background-position:center;
 	text-shadow:2px 2px 0px black;
@@ -79,16 +82,20 @@
 	text-align: center;
 }
 
-#persons{
-	height: 250;
+#fdpersons{
+	text-align: left;
 }
 
-#projects{
-	height: 250;
+#fdprojects{
+	text-align: left;
+}
+.container{
+	max-width: 1025px;
 }
 
 #footer{
 	height: 250;
+	max-width: 1140px;
 	background-color: black;
-	vertical-align: bottom
+	vertical-align: bottom;
 }
