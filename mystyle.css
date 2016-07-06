@@ -9,83 +9,84 @@
 	background-repeat:no-repeat;
 }
 /*in-headers_________________________________________________________*/
-#logo{
-	height:48px;
-	width:48px;
-	padding:1px;
-	float:left;
-	margin-left: 10px;
-}
-#search{
-	float:left;
-	width: 180px;
-	margin-top:22px;
-	margin-left: 10px;
-	font-style:italic;
-}
-#beProjna{
-	float:right;
-	height: 26px;
-	margin-top:20px;
-	margin-right: 10px;
-}
-#login{
-	color:#F5F5F5;
-	float:right;
-	margin-top:22px;
-	margin-right: 20px;
-}
+	#logo{
+		height:48px;
+		width:48px;
+		padding:1px;
+		float:left;
+		margin-left: 10px;
+	}
+	#search{
+		float:left;
+		width: 180px;
+		margin-top:22px;
+		margin-left: 10px;
+		font-style:italic;
+	}
+	#beProjna{
+		float:right;
+		height: 26px;
+		margin-top:20px;
+		margin-right: 10px;
+	}
+	#login{
+		color:#F5F5F5;
+		float:right;
+		margin-top:22px;
+		margin-right: 20px;
+	}
 /*_________________________________________________________________________*/
 
 
 #cover{
- 	height: 300px;
+ 	min-height: 300px;
+ 	max-width: 1140px;
+ 	min-width: 600px;
  	text-align: center;
 	background-image : url(./images/cover.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
+	background-size: 100% auto;
 	text-shadow:2px 2px 0px black;
 }
 /*in-covers_________________________________________________________*/
-#brand{
-	color:#F5F5F5;
-	font-size:60px;
-	line-height:100px;
-	font-weight:bold;
-}
-#slogan1{
-	color:#F5F5F5;
-	font-size:28px;
-	line-height:20px;
-	font-weight:bold;
-}
-#slogan2{
-	color:#F5F5F5;
-	font-size:28px;
-	line-height:40px;
-	font-weight:bold;
-	font-style:italic;
-}
-#learnmore{
-	color:#F5F5F5;
-	font-size:15px;
-	line-height:40px;
-	text-decoration:none;
-}
-#joinnow{
-	padding: 10px;
-}
+	#brand{
+		color:#F5F5F5;
+		font-size:60px;
+		line-height:100px;
+		font-weight:bold;
+	}
+	#slogan1{
+		color:#F5F5F5;
+		font-size:28px;
+		line-height:20px;
+		font-weight:bold;
+	}
+	#slogan2{
+		color:#F5F5F5;
+		font-size:28px;
+		line-height:40px;
+		font-weight:bold;
+		font-style:italic;
+	}
+	#learnmore{
+		color:#F5F5F5;
+		font-size:15px;
+		line-height:40px;
+		text-decoration:none;
+	}
+	#joinnow{
+		padding: 10px;
+	}
 /*_____________________________________________________________________*/
 
-#log{
-	margin-top: 30px;
-	text-align: center;
-}
+
+
 /*_____________________________________________________________________*/
 .featureDiv{
 	text-align: center;
 	max-width: 1140px;
-	min-height: 320px;
+	/*min-height: 320px;*/
 	margin-top: 20px;
 }
 	.featureDivHeader{
@@ -108,19 +109,73 @@
 		margin:0 auto;
 		position: relative;
 	}
-		.featureDivUnit {
+		.person-div-unit {
 			float: left;
-			margin-left: 15px;
-			margin-top: 15px;
+			margin: 15px;
+			border: solid;
+			border-width: 1px;
+			border-color: #F0F0F0;
+			border-radius: 5px;
+			padding: 5px;
+			width: 280px;
+			height: 250px;
+			background-color: white;
+			box-shadow: 0px 0.4px 0px #B0B0B0;
 		}
-			.featureDivUnit a{
+			.person-div-unit a{
 				text-decoration:none;
 				color:black;
+				text-align: left;
 			}
-			.featureDivUnit img{
-				height: 100px;
-				width: 180px;
+				.person-div-unit img{
+					height: 170px;
+					width: 280px;
+				}
+				.projna{
+					margin: 10px;
+					text-align: left;
+					font-size: 20;
+					font-weight:bold;
+				}
+				.n-proj{
+					margin: 10px;
+					font-size: 15;
+				}
+
+		.project-div-unit {
+			float: left;
+			margin: 15px;
+			border: solid;
+			border-width: 1px;
+			border-color: #F0F0F0;
+			border-radius: 5px;
+			padding: 5px;
+			width: 280px;
+			height: 250px;
+			background-color: white;
+			box-shadow: 0px 0.4px 0px #B0B0B0;
+
+
+		}
+			.project-div-unit a{
+				text-decoration:none;
+				color:black;
+				text-align: left;
 			}
+				.project-div-unit img{
+					height: 170px;
+					width: 280px;
+				}
+				.project-div-unit h6{
+					margin: 10px;
+					text-align: left;
+					font-size: 20;
+				}
+				.project-div-unit p{
+					margin: 10px;
+					font-size: 15;
+				}
+
 
 	
 
