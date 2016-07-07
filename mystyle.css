@@ -1,6 +1,6 @@
 #header{
 	height: 50;
-	background-color: #252533;
+	background-color: #232D32;
 	min-width: 600px;
 	max-width: 1140px;
 	text-align: center;
@@ -190,7 +190,7 @@
 #footer{
 	height: 250;
 	max-width: 1140px;
-	background-color: black;
+	background-color: #232D32;
 	vertical-align: bottom;
 }
 
