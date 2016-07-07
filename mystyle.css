@@ -88,9 +88,11 @@
 	max-width: 1140px;
 	/*min-height: 320px;*/
 	margin-top: 20px;
+	display: block;
 }
 	.featureDivHeader{
 		text-align: left;
+		display: block;
 	}
 		.featureNameSpan{
 			text-align: left;
@@ -100,14 +102,11 @@
 			}
 		.featureMoreDiv{
 			float: right;
-			margin-top: 15px;
+			margin-top: 4px;
+			display: inline;
 		}
 	.featureDivBody{
-		text-align: center;
 		display: inline-block;
-		/*vertical-align: middle;*/
-		margin:0 auto;
-		position: relative;
 	}
 		.person-div-unit {
 			float: left;
@@ -125,7 +124,6 @@
 			.person-div-unit a{
 				text-decoration:none;
 				color:black;
-				text-align: left;
 			}
 				.person-div-unit img{
 					height: 170px;
@@ -134,7 +132,6 @@
 				}
 				.projna{
 					margin: 10px;
-					text-align: left;
 					font-size: 20;
 					font-weight:bold;
 				}
