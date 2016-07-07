@@ -193,3 +193,19 @@
 	background-color: black;
 	vertical-align: bottom;
 }
+
+/*_____________________________________________________________________*/
+.regform input{
+	margin: 10px;
+	padding: 5px;
+}
+
+.regform button{
+	margin: 10px;
+	margin-bottom: 20px;
+	padding: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+/*_____________________________________________________________________*/
+
