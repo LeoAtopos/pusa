@@ -128,24 +128,27 @@
 		.person-div-unit {
 			float: left;
 			margin: 15px;
-			border: solid;
-			border-width: 1px;
+/*			border: solid;*/
+/*			border-width: 1px;
 			border-color: #F0F0F0;
-			border-radius: 5px;
+			border-radius: 5px;*/
 			padding: 5px;
 			width: 280px;
 			height: 200px;
-			background-color: white;
-			box-shadow: 0px 0.4px 0px #B0B0B0;
+/*			background-color: white;
+			box-shadow: 0px 0.4px 0px #B0B0B0;*/
 		}
 			.person-div-unit a{
 				text-decoration:none;
 				color:black;
+/*				text-align: center;
+				display: inline-block;*/
 			}
 				.person-div-unit img{
-					height: 170px;
-					width: 280px;
-					margin-bottom: 8px;
+					height: 160px;
+					width: 160px;
+					margin-bottom: 4px;
+					display: block;
 				}
 				.projna{
 					margin: 10px;
@@ -160,15 +163,15 @@
 		.project-div-unit {
 			float: left;
 			margin: 15px;
-			border: solid;
+/*			border: solid;
 			border-width: 1px;
 			border-color: #F0F0F0;
-			border-radius: 5px;
+			border-radius: 5px;*/
 			padding: 5px;
 			width: 280px;
-			height: 250px;
-			background-color: white;
-			box-shadow: 0px 0.4px 0px #B0B0B0;
+			height: 260px;
+/*			background-color: white;
+			box-shadow: 0px 0.4px 0px #B0B0B0;*/
 
 
 		}
@@ -178,8 +181,8 @@
 				text-align: left;
 			}
 				.project-div-unit img{
-					height: 170px;
-					width: 280px;
+					height: 158px;
+					width: 268px;
 				}
 				.project-div-unit h6{
 					margin: 10px;
@@ -187,7 +190,7 @@
 					font-size: 20;
 				}
 				.project-div-unit p{
-					margin: 10px;
+					margin: 8px;
 					font-size: 15;
 				}
 
