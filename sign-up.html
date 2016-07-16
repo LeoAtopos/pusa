@@ -35,33 +35,24 @@
 		<div id = "footer"></div>
 	</div>
 </body>
-<script type="text/javascript">
-	$(document).ready(function(){
-	  $("#signUpButton").click(function(){
-	    $.get("http://172.16.40.31:8081/pusaSignupTest",function(er,status){
-	      alert("数据: " + er + "\n状态: " + status);
-	    });
-	  });
-	});
-	// $("#signUpButton").click(function(){
-	// 	$.get("http://172.16.40.31:8081/pusaSignupTest",signUpCallback()
-	// 	);
-	// })
-	// function signUpCallback(){
-	// 	alert("data");
-	// }
-</script>
 
 <script>
-	// $(document).ready(function(){
-	// 	$("#signUpButton").click(signUpButtonClick;
-	// });
-	// function signUpButtonClick(){
-	// 	alert("hahah");
-	// }
-	// // function signUpCallback(){
-	// // 	alert(status);
-	// // }
+	$(document).ready(function(){
+		$("#signUpButton").click(signUpButtonClick);
+	});
+	function signUpButtonClick(){
+		var params ={
+			email : $("#e-mail").val(),
+			password : $("password").val()
+		}
+		$.ajax({
+			type:"post",url:"http://172.16.40.31:8081/pusaSignupTest",data:params,
+			success: function(msg){
+				alert(JSON.stringify(msg));
+				window.location.href="index.html"; 
+			}
+		});
+	}
 </script>
 
 </html>
