@@ -4,8 +4,8 @@
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<title>Projna-Build with Projects</title>
 	<link rel="shortcut icon" href="images/logo.png" />
-	<link href="https://cdn.bootcss.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.bootcss.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<link href="https://cdn.bootcss.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="mystyle.css" />
 </head>
@@ -26,9 +26,9 @@
 		<div class = "regform">
 			<h1>Sign Up</h1>
 			<h3>- live to build -</h3>
-			<input id = "e-mail" placeholder="E-mail"><br>
-			<input id = "password" placeholder="Password"><br>
-			<input id = "rePassword" placeholder="Repeat Password"><br>
+			<input id = "email" type = "email" placeholder="E-mail"><br>
+			<input id = "password" type = "password" placeholder="Password"><br>
+			<input id = "rePassword" type = "password" placeholder="Repeat Password"><br>
 			<button id = "signUpButton">Sign Up</button>
 		</div>				
 		<!-- the footer sect, with some notions and communication ways -->
@@ -37,23 +37,54 @@
 </body>
 
 <script>
+	var email;
+	var password;
+	var repassword;
 	$(document).ready(function(){
 		$("#signUpButton").click(signUpButtonClick);
 	});
 	function signUpButtonClick(){
+		email = $("#email").val();
+		password = $("#password").val();
+		repassword = $("#rePassword").val();
+		if(isOKInput()){
+			ajaxSend();
+		}
+	}
+
+	function isOKInput(){
+		if(email == "" || password == "" || repassword == ""){
+			alert(email);
+			return false;
+		}
+		if(password != repassword){
+			alert("Password not the same");
+			return false;
+		}
+		if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
+			alert("E-mail is not a real E-mail");
+			$("#email1").focus();
+			return false;
+		}
+		return true;
+	}
+
+	function ajaxSend(){
 		var params ={
-			email : $("#e-mail").val(),
-			password : $("password").val()
+		email : $("#email").val(),
+		password : $("#password").val()
 		}
 		$.ajax({
-			type:"post",url:"http://172.16.40.31:8081/pusaSignupTest",data:params,
+			type:"POST",
+			url:"http://172.16.40.31:8081/user/onregister",
+			data:params,
 			success: function(msg){
 				alert(JSON.stringify(msg));
-				window.location.href="index.html"; 
-			}
+				window.location.href="index.html";
+			},
+			error : function(msg){alert(JSON.stringify(msg));} 
 		});
 	}
 </script>
-
 </html>
 
