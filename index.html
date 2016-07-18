@@ -108,7 +108,7 @@
 	function isLogged(){
 		var userInfo;
 		$.ajax({
-			type:"get",url:"http://172.16.40.31:8081/checkSession",data:{},
+			type:"GET",url:"http://172.16.40.31:8081/checkSession",data:{},
 			success: function(msg){
 				alert("Sign Up Success");
 				userInfo = msg;
