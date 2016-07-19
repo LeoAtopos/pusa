@@ -94,28 +94,62 @@
 <script type="text/javascript">
 	$(document).ready(checkLogIn);
 	function checkLogIn(){
-		if(isLogged()){
-			$("#login").hide();
-			$("#beProjna").hide();
-			$("#projnaName").show();
-		}
-		else{
-			$("#login").show();
-			$("#beProjna").show();
-			$("#projnaName").hide();
-		}
-	}
-	function isLogged(){
-		var userInfo;
 		$.ajax({
-			type:"GET",url:"http://172.16.40.31:8081/checkSession",data:{},
+			type:"GET",
+			url:"http://172.16.40.31:8081/user/checkSession",
+			data:{},
 			success: function(msg){
-				alert("Sign Up Success");
-				userInfo = msg;
+				alert(JSON.stringify(msg)+"right");
+				if(msg.status == "user"){
+					$("#login").hide();
+					$("#beProjna").hide();
+					$("#projnaName").show();
+				}
+				else{
+					$("#login").show();
+					$("#beProjna").show();
+					$("#projnaName").hide();
+				}
+				
+			},
+			error : function(msg){
+				alert(JSON.stringify(msg)+"wrong");
+				$("#login").show();
+				$("#beProjna").show();
+				$("#projnaName").hide();
 			}
 		});
-		if (userInfo.success) return true;
-		else return false;
+	}
+	
+</script>
+<script type="text/javascript">
+
+	$(document).ready(loadFeature);
+	function loadFeature(){
+		loadPerson();
+		loadProject();
+	}
+
+	function loadPerson(){
+		var pnList = getPnList();
+		setPnList(pnList);
+	}
+	function getPnList(){
+
+	}
+	function setPnList(pnl){
+
+	}
+
+	function loadProject(){
+		var prList = getPrList();
+		setPrList(prList);
+	}
+	function getPrList(){
+
+	}
+	function setPrList(prl){
+
 	}
 </script>
 </html>
